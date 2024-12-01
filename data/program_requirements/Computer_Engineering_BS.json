@@ -1,0 +1,2144 @@
+{
+    "required_courses": [
+        {
+            "course": "MATH 140",
+            "credits": 4
+        },
+        {
+            "course": "MATH 141",
+            "credits": 4
+        },
+        {
+            "course": "MATH 242",
+            "credits": 4
+        },
+        {
+            "course": "MATH 260",
+            "credits": 3
+        },
+        {
+            "course": "CS 220",
+            "credits": 3
+        },
+        {
+            "course": "ENGIN 211L",
+            "credits": 3
+        },
+        {
+            "course": "PHYSIC 113",
+            "credits": 4
+        },
+        {
+            "course": "PHYSIC 114",
+            "credits": 4
+        },
+        {
+            "course": "PHYSIC 181",
+            "credits": 2
+        },
+        {
+            "course": "PHYSIC 182",
+            "credits": 2
+        },
+        {
+            "course": "CS 110",
+            "credits": 4
+        },
+        {
+            "course": "CS 210",
+            "credits": 4
+        },
+        {
+            "course": "CS 240",
+            "credits": 3
+        },
+        {
+            "course": "CS 310",
+            "credits": 3
+        },
+        {
+            "course": "ENGIN 104",
+            "credits": 3
+        },
+        {
+            "course": "ENGIN 231",
+            "credits": 3
+        },
+        {
+            "course": "ENGIN 271",
+            "credits": 1
+        },
+        {
+            "course": "ENGIN 232",
+            "credits": 3
+        },
+        {
+            "course": "ENGIN 272",
+            "credits": 1
+        },
+        {
+            "course": "ENGIN 241",
+            "credits": 4
+        },
+        {
+            "course": "ENGIN 321",
+            "credits": 3
+        },
+        {
+            "course": "ENGIN 322",
+            "credits": 3
+        },
+        {
+            "course": "ENGIN 341",
+            "credits": 3
+        },
+        {
+            "course": "ENGIN 342",
+            "credits": 3
+        },
+        {
+            "course": "ENGIN 346",
+            "credits": 3
+        },
+        {
+            "course": "ENGIN 365",
+            "credits": 4
+        },
+        {
+            "course": "ENGIN 448",
+            "credits": 3
+        },
+        {
+            "course": "ENGIN 491",
+            "credits": 3
+        },
+        {
+            "course": "ENGIN 492",
+            "credits": 3
+        }
+    ],
+    "choose_courses": [
+        {
+            "count": 3,
+            "courses": [
+                {
+                    "course": "ENGIN 442",
+                    "credits": 3
+                },
+                {
+                    "course": "CS 420",
+                    "credits": 3
+                },
+                {
+                    "course": "CS 438",
+                    "credits": 3
+                },
+                {
+                    "course": "CS 444",
+                    "credits": 3
+                },
+                {
+                    "course": "CS 446",
+                    "credits": 3
+                },
+                {
+                    "course": "CS 451",
+                    "credits": 3
+                },
+                {
+                    "course": "CS 470",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGIN 304",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGIN 331",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGIN 351",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGIN 366",
+                    "credits": 4
+                },
+                {
+                    "course": "ENGIN 471",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGIN 478",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGIN 480",
+                    "credits": 3
+                }
+            ]
+        },
+        {
+            "section_title": "United States",
+            "count": 1,
+            "courses": [
+                {
+                    "course": "WGS 100",
+                    "credits": 3
+                },
+                {
+                    "course": "AMST 100",
+                    "credits": 3
+                },
+                {
+                    "course": "AFRSTY 108",
+                    "credits": 3
+                },
+                {
+                    "course": "PHIL 108",
+                    "credits": 3
+                },
+                {
+                    "course": "THRART 109",
+                    "credits": 3
+                },
+                {
+                    "course": "AMST 110G",
+                    "credits": 4
+                },
+                {
+                    "course": "SOCIOL 110G",
+                    "credits": 4
+                },
+                {
+                    "course": "AFRSTY 111",
+                    "credits": 3
+                },
+                {
+                    "course": "LABOR 120L",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 120L",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGL 124",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGL 126",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 175",
+                    "credits": 3
+                },
+                {
+                    "course": "GERON 180",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 186",
+                    "credits": 3
+                },
+                {
+                    "course": "ASAMST 200",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 200",
+                    "credits": 3
+                },
+                {
+                    "course": "SOCIOL 200",
+                    "credits": 3
+                },
+                {
+                    "course": "AMST 201L",
+                    "credits": 3
+                },
+                {
+                    "course": "LATSTY 201L",
+                    "credits": 3
+                },
+                {
+                    "course": "UPCD 201",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 201",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGL 202",
+                    "credits": 3
+                },
+                {
+                    "course": "AMST 206",
+                    "credits": 3
+                },
+                {
+                    "course": "AMST 209",
+                    "credits": 3
+                },
+                {
+                    "course": "AMST 210",
+                    "credits": 3
+                },
+                {
+                    "course": "LABOR 210L",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 210L",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 210L",
+                    "credits": 3
+                },
+                {
+                    "course": "UPCD 210",
+                    "credits": 3
+                },
+                {
+                    "course": "AMST 211",
+                    "credits": 3
+                },
+                {
+                    "course": "LABOR 222G",
+                    "credits": 3
+                },
+                {
+                    "course": "ASAMST 223L",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGL 223L",
+                    "credits": 3
+                },
+                {
+                    "course": "LATSTY 223L",
+                    "credits": 3
+                },
+                {
+                    "course": "ASAMST 225L",
+                    "credits": 3
+                },
+                {
+                    "course": "ASAMST 228L",
+                    "credits": 3
+                },
+                {
+                    "course": "AFRSTY 230",
+                    "credits": 3
+                },
+                {
+                    "course": "PSYCH 234",
+                    "credits": 3
+                },
+                {
+                    "course": "AMST 235",
+                    "credits": 3
+                },
+                {
+                    "course": "PSYCH 235",
+                    "credits": 3
+                },
+                {
+                    "course": "ASAMST 238L",
+                    "credits": 3
+                },
+                {
+                    "course": "PSYCH 238L",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 240",
+                    "credits": 3
+                },
+                {
+                    "course": "AFRSTY 250",
+                    "credits": 3
+                },
+                {
+                    "course": "ASAMST 265L",
+                    "credits": 3
+                },
+                {
+                    "course": "POLSCI 265L",
+                    "credits": 3
+                },
+                {
+                    "course": "PHIL 265",
+                    "credits": 3
+                },
+                {
+                    "course": "AFRSTY 270",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 270",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 277",
+                    "credits": 3
+                },
+                {
+                    "course": "AMST 278L",
+                    "credits": 3
+                },
+                {
+                    "course": "ART 278L",
+                    "credits": 3
+                },
+                {
+                    "course": "NAIS 278L",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 278L",
+                    "credits": 3
+                },
+                {
+                    "course": "ECON 310",
+                    "credits": 3
+                },
+                {
+                    "course": "LABOR 315",
+                    "credits": 3
+                },
+                {
+                    "course": "PHIL 318",
+                    "credits": 3
+                },
+                {
+                    "course": "POLSCI 320",
+                    "credits": 3
+                },
+                {
+                    "course": "UPCD 321",
+                    "credits": 3
+                },
+                {
+                    "course": "LABOR 330",
+                    "credits": 3
+                },
+                {
+                    "course": "POLSCI 332",
+                    "credits": 3
+                },
+                {
+                    "course": "POLSCI 340",
+                    "credits": 3
+                },
+                {
+                    "course": "SOCIOL 342L",
+                    "credits": 3
+                },
+                {
+                    "course": "GERON 342L",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 343L",
+                    "credits": 3
+                },
+                {
+                    "course": "AMST 343L",
+                    "credits": 3
+                },
+                {
+                    "course": "POLSCI 345",
+                    "credits": 3
+                },
+                {
+                    "course": "COMM 345L",
+                    "credits": 3
+                },
+                {
+                    "course": "ENVSTY 345L",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 347",
+                    "credits": 3
+                },
+                {
+                    "course": "AFRSTY 350L",
+                    "credits": 3
+                },
+                {
+                    "course": "AMST 350L",
+                    "credits": 3
+                },
+                {
+                    "course": "AMST 353L",
+                    "credits": 3
+                },
+                {
+                    "course": "LATSTY 353L",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGL 357",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 358",
+                    "credits": 3
+                },
+                {
+                    "course": "ASAMST 370",
+                    "credits": 3
+                },
+                {
+                    "course": "HUMCTR 371",
+                    "credits": 3
+                },
+                {
+                    "course": "AMST 372L",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGL 372L",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 375",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 377",
+                    "credits": 3
+                },
+                {
+                    "course": "SOCIOL 382",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 390L",
+                    "credits": 3
+                },
+                {
+                    "course": "LABOR 390L",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 394L",
+                    "credits": 3
+                },
+                {
+                    "course": "AMST 394L",
+                    "credits": 3
+                },
+                {
+                    "course": "ECON 395",
+                    "credits": 3
+                },
+                {
+                    "course": "ECON 420",
+                    "credits": 3
+                },
+                {
+                    "course": "SOCIOL 460",
+                    "credits": 6
+                }
+            ]
+        },
+        {
+            "section_title": "International",
+            "count": 1,
+            "courses": [
+                {
+                    "course": "AFRSTY 100",
+                    "credits": 3
+                },
+                {
+                    "course": "AFRSTY 101",
+                    "credits": 3
+                },
+                {
+                    "course": "ENVSCI 102",
+                    "credits": 3
+                },
+                {
+                    "course": "ART 104L",
+                    "credits": 3
+                },
+                {
+                    "course": "ASIAN 104L",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 110",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 112G",
+                    "credits": 4
+                },
+                {
+                    "course": "MUSIC 115",
+                    "credits": 3
+                },
+                {
+                    "course": "ASIAN 115L",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 115L",
+                    "credits": 3
+                },
+                {
+                    "course": "RELSTY 125L",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 125L",
+                    "credits": 3
+                },
+                {
+                    "course": "ASIAN 161L",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 161L",
+                    "credits": 3
+                },
+                {
+                    "course": "CINE 201",
+                    "credits": 3
+                },
+                {
+                    "course": "POLSCI 202",
+                    "credits": 3
+                },
+                {
+                    "course": "CINE 202",
+                    "credits": 3
+                },
+                {
+                    "course": "ART 212L",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 214",
+                    "credits": 3
+                },
+                {
+                    "course": "POLSCI 220",
+                    "credits": 3
+                },
+                {
+                    "course": "ASAMST 226",
+                    "credits": 3
+                },
+                {
+                    "course": "ART 230",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 232",
+                    "credits": 3
+                },
+                {
+                    "course": "RELSTY 241L",
+                    "credits": 3
+                },
+                {
+                    "course": "CLSICS 241L",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 243L",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 243L",
+                    "credits": 3
+                },
+                {
+                    "course": "MUSIC 248",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 251L",
+                    "credits": 3
+                },
+                {
+                    "course": "ASIAN 251L",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 253",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 255L",
+                    "credits": 3
+                },
+                {
+                    "course": "LATAM 255L",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 256L",
+                    "credits": 3
+                },
+                {
+                    "course": "LATAM 256L",
+                    "credits": 3
+                },
+                {
+                    "course": "ART 256",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 256",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 260",
+                    "credits": 3
+                },
+                {
+                    "course": "JAPAN 260",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 263",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 264",
+                    "credits": 3
+                },
+                {
+                    "course": "MLLC 265L",
+                    "credits": 3
+                },
+                {
+                    "course": "ASIAN 265L",
+                    "credits": 3
+                },
+                {
+                    "course": "MUSIC 268",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 268",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 269L",
+                    "credits": 3
+                },
+                {
+                    "course": "ART 269L",
+                    "credits": 3
+                },
+                {
+                    "course": "ASAMST 270",
+                    "credits": 3
+                },
+                {
+                    "course": "LATAM 270",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 272",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 273",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 279",
+                    "credits": 3
+                },
+                {
+                    "course": "ASIAN 280",
+                    "credits": 3
+                },
+                {
+                    "course": "CLSICS 281",
+                    "credits": 3
+                },
+                {
+                    "course": "CLSICS 284",
+                    "credits": 3
+                },
+                {
+                    "course": "AMST 285L",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 285L",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGL 293L",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 293L",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 295L",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 295L",
+                    "credits": 3
+                },
+                {
+                    "course": "PHIL 297",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 300L",
+                    "credits": 3
+                },
+                {
+                    "course": "AFRSTY 300L",
+                    "credits": 3
+                },
+                {
+                    "course": "LATAM 303",
+                    "credits": 3
+                },
+                {
+                    "course": "CLSICS 311L",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 311L",
+                    "credits": 3
+                },
+                {
+                    "course": "RELSTY 311L",
+                    "credits": 3
+                },
+                {
+                    "course": "RELSTY 312",
+                    "credits": 3
+                },
+                {
+                    "course": "MUSIC 315",
+                    "credits": 3
+                },
+                {
+                    "course": "ARABIC 320",
+                    "credits": 3
+                },
+                {
+                    "course": "LABOR 325",
+                    "credits": 3
+                },
+                {
+                    "course": "SOCIOL 333L",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 333L",
+                    "credits": 3
+                },
+                {
+                    "course": "LABOR 335",
+                    "credits": 3
+                },
+                {
+                    "course": "ASIAN 335L",
+                    "credits": 3
+                },
+                {
+                    "course": "RELSTY 335L",
+                    "credits": 3
+                },
+                {
+                    "course": "ECON 339",
+                    "credits": 3
+                },
+                {
+                    "course": "MLLC 340L",
+                    "credits": 3
+                },
+                {
+                    "course": "FRENCH 340L",
+                    "credits": 3
+                },
+                {
+                    "course": "GERMAN 340L",
+                    "credits": 3
+                },
+                {
+                    "course": "ITAL 340L",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 343L",
+                    "credits": 3
+                },
+                {
+                    "course": "AFRSTY 343L",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 345L",
+                    "credits": 3
+                },
+                {
+                    "course": "ASIAN 345L",
+                    "credits": 3
+                },
+                {
+                    "course": "SOCIOL 355L",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 355L",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 356",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 357",
+                    "credits": 3
+                },
+                {
+                    "course": "ASIAN 357L",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 357L",
+                    "credits": 3
+                },
+                {
+                    "course": "RELSTY 357L",
+                    "credits": 3
+                },
+                {
+                    "course": "ASIAN 359L",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 359L",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 359L",
+                    "credits": 3
+                },
+                {
+                    "course": "ASIAN 361L",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 361L",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 361L",
+                    "credits": 3
+                },
+                {
+                    "course": "CINE 361L",
+                    "credits": 3
+                },
+                {
+                    "course": "ASIAN 363L",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 363L",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 364L",
+                    "credits": 3
+                },
+                {
+                    "course": "ASIAN 364L",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 364",
+                    "credits": 3
+                },
+                {
+                    "course": "ASIAN 366L",
+                    "credits": 3
+                },
+                {
+                    "course": "MLLC 366L",
+                    "credits": 3
+                },
+                {
+                    "course": "SOCIOL 372",
+                    "credits": 3
+                },
+                {
+                    "course": "LATAM 375L",
+                    "credits": 3
+                },
+                {
+                    "course": "PORT 375L",
+                    "credits": 3
+                },
+                {
+                    "course": "POLSCI 375",
+                    "credits": 3
+                },
+                {
+                    "course": "ASAMST 375L",
+                    "credits": 3
+                },
+                {
+                    "course": "POLSCI 390",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 401",
+                    "credits": 3
+                },
+                {
+                    "course": "POLSCI 404",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGL 411",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 411",
+                    "credits": 3
+                },
+                {
+                    "course": "AFRSTY 440",
+                    "credits": 3
+                }
+            ]
+        },
+        {
+            "section_title": "Arts",
+            "count": 1,
+            "courses": []
+        },
+        {
+            "section_title": "Humanities",
+            "count": 1,
+            "courses": [
+                {
+                    "course": "AMST 100",
+                    "credits": 3
+                },
+                {
+                    "course": "PHIL 100",
+                    "credits": 3
+                },
+                {
+                    "course": "AMST 101",
+                    "credits": 3
+                },
+                {
+                    "course": "LATAM 101",
+                    "credits": 3
+                },
+                {
+                    "course": "POLSCI 103",
+                    "credits": 3
+                },
+                {
+                    "course": "PHIL 108",
+                    "credits": 3
+                },
+                {
+                    "course": "THRART 109",
+                    "credits": 3
+                },
+                {
+                    "course": "AFRSTY 110",
+                    "credits": 3
+                },
+                {
+                    "course": "AFRSTY 111",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 150",
+                    "credits": 3
+                },
+                {
+                    "course": "PHIL 150",
+                    "credits": 3
+                },
+                {
+                    "course": "CLSICS 180",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 185",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 186",
+                    "credits": 3
+                },
+                {
+                    "course": "ASAMST 200",
+                    "credits": 3
+                },
+                {
+                    "course": "MLLC 200",
+                    "credits": 3
+                },
+                {
+                    "course": "AMST 201L",
+                    "credits": 3
+                },
+                {
+                    "course": "LATSTY 201L",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGL 201",
+                    "credits": 3
+                },
+                {
+                    "course": "THRART 201",
+                    "credits": 3
+                },
+                {
+                    "course": "CINE 201",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGL 202",
+                    "credits": 3
+                },
+                {
+                    "course": "CINE 202",
+                    "credits": 3
+                },
+                {
+                    "course": "AMST 206",
+                    "credits": 3
+                },
+                {
+                    "course": "PHIL 208",
+                    "credits": 3
+                },
+                {
+                    "course": "AMST 209",
+                    "credits": 3
+                },
+                {
+                    "course": "AMST 210",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 211",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 212",
+                    "credits": 3
+                },
+                {
+                    "course": "PHIL 212",
+                    "credits": 3
+                },
+                {
+                    "course": "PHIL 215",
+                    "credits": 3
+                },
+                {
+                    "course": "PHIL 216",
+                    "credits": 3
+                },
+                {
+                    "course": "PHIL 218",
+                    "credits": 3
+                },
+                {
+                    "course": "CLSICS 218G",
+                    "credits": 3
+                },
+                {
+                    "course": "PHIL 220",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 220",
+                    "credits": 3
+                },
+                {
+                    "course": "PHIL 222",
+                    "credits": 3
+                },
+                {
+                    "course": "ASAMST 223L",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGL 223L",
+                    "credits": 3
+                },
+                {
+                    "course": "LATSTY 223L",
+                    "credits": 3
+                },
+                {
+                    "course": "ART 224",
+                    "credits": 3
+                },
+                {
+                    "course": "PHIL 225L",
+                    "credits": 3
+                },
+                {
+                    "course": "RELSTY 225L",
+                    "credits": 3
+                },
+                {
+                    "course": "ASAMST 226",
+                    "credits": 3
+                },
+                {
+                    "course": "AFRSTY 230",
+                    "credits": 3
+                },
+                {
+                    "course": "CLSICS 233L",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 233L",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGL 236",
+                    "credits": 3
+                },
+                {
+                    "course": "RELSTY 241L",
+                    "credits": 3
+                },
+                {
+                    "course": "CLSICS 241L",
+                    "credits": 3
+                },
+                {
+                    "course": "PHIL 255",
+                    "credits": 3
+                },
+                {
+                    "course": "SPAN 262L",
+                    "credits": 3
+                },
+                {
+                    "course": "LATAM 262L",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 265",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 266",
+                    "credits": 3
+                },
+                {
+                    "course": "ITAL 267",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGL 268",
+                    "credits": 3
+                },
+                {
+                    "course": "ASAMST 270",
+                    "credits": 3
+                },
+                {
+                    "course": "CLSICS 284",
+                    "credits": 3
+                },
+                {
+                    "course": "PHIL 286",
+                    "credits": 3
+                },
+                {
+                    "course": "HONORS 292",
+                    "credits": 3
+                },
+                {
+                    "course": "CINE 304",
+                    "credits": 3
+                },
+                {
+                    "course": "RELSTY 312",
+                    "credits": 3
+                },
+                {
+                    "course": "AMST 325L",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 325L",
+                    "credits": 3
+                },
+                {
+                    "course": "PHIL 333",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 343L",
+                    "credits": 3
+                },
+                {
+                    "course": "AMST 343L",
+                    "credits": 3
+                },
+                {
+                    "course": "PHIL 344",
+                    "credits": 3
+                },
+                {
+                    "course": "PHIL 347",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGL 357",
+                    "credits": 3
+                },
+                {
+                    "course": "EDC U 370",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 377",
+                    "credits": 3
+                },
+                {
+                    "course": "CLSICS 388",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGL 396",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGL 401",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 420",
+                    "credits": 3
+                }
+            ]
+        },
+        {
+            "section_title": "Social & Behavioral Sciences",
+            "count": 2,
+            "courses": [
+                {
+                    "course": "WGS 100",
+                    "credits": 3
+                },
+                {
+                    "course": "PSYCH 100",
+                    "credits": 3
+                },
+                {
+                    "course": "COMM 100",
+                    "credits": 3
+                },
+                {
+                    "course": "ECON 101",
+                    "credits": 3
+                },
+                {
+                    "course": "POLSCI 101",
+                    "credits": 3
+                },
+                {
+                    "course": "SOCIOL 101",
+                    "credits": 3
+                },
+                {
+                    "course": "ECON 102",
+                    "credits": 3
+                },
+                {
+                    "course": "POLSCI 102",
+                    "credits": 3
+                },
+                {
+                    "course": "ENVSCI 105",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 106",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 107",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 110",
+                    "credits": 3
+                },
+                {
+                    "course": "UPCD 120L",
+                    "credits": 3
+                },
+                {
+                    "course": "ENVSTY 120L",
+                    "credits": 3
+                },
+                {
+                    "course": "ENVSCI 122",
+                    "credits": 3
+                },
+                {
+                    "course": "GERON 150",
+                    "credits": 3
+                },
+                {
+                    "course": "SOCIOL 160",
+                    "credits": 3
+                },
+                {
+                    "course": "GERON 160",
+                    "credits": 3
+                },
+                {
+                    "course": "GERON 170",
+                    "credits": 3
+                },
+                {
+                    "course": "GERON 180",
+                    "credits": 3
+                },
+                {
+                    "course": "ECON 201",
+                    "credits": 3
+                },
+                {
+                    "course": "UPCD 201",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 201",
+                    "credits": 3
+                },
+                {
+                    "course": "ECON 202",
+                    "credits": 3
+                },
+                {
+                    "course": "POLSCI 202",
+                    "credits": 3
+                },
+                {
+                    "course": "LABOR 210L",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 210L",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 210L",
+                    "credits": 3
+                },
+                {
+                    "course": "UPCD 210",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 214",
+                    "credits": 3
+                },
+                {
+                    "course": "LABOR 222G",
+                    "credits": 3
+                },
+                {
+                    "course": "ASAMST 225L",
+                    "credits": 3
+                },
+                {
+                    "course": "ASAMST 228L",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 230",
+                    "credits": 3
+                },
+                {
+                    "course": "SOCIOL 230",
+                    "credits": 3
+                },
+                {
+                    "course": "ENVSTY 230",
+                    "credits": 3
+                },
+                {
+                    "course": "ASAMST 238L",
+                    "credits": 3
+                },
+                {
+                    "course": "PSYCH 238L",
+                    "credits": 3
+                },
+                {
+                    "course": "GERON 240",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 243L",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 243L",
+                    "credits": 3
+                },
+                {
+                    "course": "COMM 250",
+                    "credits": 3
+                },
+                {
+                    "course": "GERON 250",
+                    "credits": 3
+                },
+                {
+                    "course": "GERON 260",
+                    "credits": 3
+                },
+                {
+                    "course": "SOCIOL 262",
+                    "credits": 3
+                },
+                {
+                    "course": "PHIL 265",
+                    "credits": 3
+                },
+                {
+                    "course": "EDC U 270",
+                    "credits": 3
+                },
+                {
+                    "course": "PSYCH 271L",
+                    "credits": 3
+                },
+                {
+                    "course": "CS 271L",
+                    "credits": 3
+                },
+                {
+                    "course": "HONORS 293",
+                    "credits": 3
+                },
+                {
+                    "course": "COMM 300",
+                    "credits": 3
+                },
+                {
+                    "course": "UPCD 301",
+                    "credits": 3
+                },
+                {
+                    "course": "ECON 310",
+                    "credits": 3
+                },
+                {
+                    "course": "ECON 318",
+                    "credits": 3
+                },
+                {
+                    "course": "UPCD 321",
+                    "credits": 3
+                },
+                {
+                    "course": "LABOR 325",
+                    "credits": 3
+                },
+                {
+                    "course": "ECON 334",
+                    "credits": 3
+                },
+                {
+                    "course": "ECON 335",
+                    "credits": 3
+                },
+                {
+                    "course": "ECON 336",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 340",
+                    "credits": 3
+                },
+                {
+                    "course": "SOCIOL 342L",
+                    "credits": 3
+                },
+                {
+                    "course": "GERON 342L",
+                    "credits": 3
+                },
+                {
+                    "course": "COMM 345L",
+                    "credits": 3
+                },
+                {
+                    "course": "ENVSTY 345L",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 353",
+                    "credits": 3
+                },
+                {
+                    "course": "SOCIOL 367",
+                    "credits": 3
+                },
+                {
+                    "course": "SOCIOL 382",
+                    "credits": 3
+                },
+                {
+                    "course": "ECON 390",
+                    "credits": 3
+                },
+                {
+                    "course": "ECON 395",
+                    "credits": 3
+                },
+                {
+                    "course": "ECON 420",
+                    "credits": 3
+                }
+            ]
+        },
+        {
+            "section_title": "Natural Sciences",
+            "count": 1,
+            "courses": [
+                {
+                    "course": "ENVSCI 101",
+                    "credits": 3
+                },
+                {
+                    "course": "BIOL 101",
+                    "credits": 3
+                },
+                {
+                    "course": "ENVSTY 101",
+                    "credits": 3
+                },
+                {
+                    "course": "BIOL 102",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGIN 103",
+                    "credits": 3
+                },
+                {
+                    "course": "ENVSCI 104",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 105",
+                    "credits": 3
+                },
+                {
+                    "course": "PHYSIC 107",
+                    "credits": 3
+                },
+                {
+                    "course": "BIOL 108",
+                    "credits": 3
+                },
+                {
+                    "course": "PHYSIC 108",
+                    "credits": 3
+                },
+                {
+                    "course": "CHEM 111L",
+                    "credits": 3
+                },
+                {
+                    "course": "ENVSTY 111L",
+                    "credits": 3
+                },
+                {
+                    "course": "BIOL 111",
+                    "credits": 4
+                },
+                {
+                    "course": "BIOL 112",
+                    "credits": 4
+                },
+                {
+                    "course": "PHYSIC 113",
+                    "credits": 4
+                },
+                {
+                    "course": "PHYSIC 114",
+                    "credits": 4
+                },
+                {
+                    "course": "CHEM 115",
+                    "credits": 3
+                },
+                {
+                    "course": "CHEM 116",
+                    "credits": 3
+                },
+                {
+                    "course": "ENVSCI 120",
+                    "credits": 3
+                },
+                {
+                    "course": "PHYSIC 121",
+                    "credits": 3
+                },
+                {
+                    "course": "PHYSIC 126",
+                    "credits": 3
+                },
+                {
+                    "course": "CHEM 130",
+                    "credits": 4
+                },
+                {
+                    "course": "PHYSIC 134",
+                    "credits": 3
+                },
+                {
+                    "course": "ENVSCI 150L",
+                    "credits": 3
+                },
+                {
+                    "course": "ENVSTY 150L",
+                    "credits": 3
+                },
+                {
+                    "course": "BIOL 207",
+                    "credits": 4
+                },
+                {
+                    "course": "BIOL 208",
+                    "credits": 4
+                },
+                {
+                    "course": "ENVSCI 225",
+                    "credits": 3
+                },
+                {
+                    "course": "ENVSCI 226",
+                    "credits": 3
+                },
+                {
+                    "course": "CHEM 251",
+                    "credits": 3
+                },
+                {
+                    "course": "CHEM 252",
+                    "credits": 3
+                },
+                {
+                    "course": "ENVSCI 260",
+                    "credits": 3
+                },
+                {
+                    "course": "HONORS 295",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 316",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 324",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 341",
+                    "credits": 4
+                },
+                {
+                    "course": "ANTH 358",
+                    "credits": 3
+                }
+            ]
+        },
+        {
+            "section_title": "Mathematics and Technology",
+            "count": 1,
+            "courses": [
+                {
+                    "course": "CS 105",
+                    "credits": 3
+                },
+                {
+                    "course": "CS 110",
+                    "credits": 4
+                },
+                {
+                    "course": "IT 114L",
+                    "credits": 3
+                },
+                {
+                    "course": "IT 116",
+                    "credits": 3
+                },
+                {
+                    "course": "IT 117",
+                    "credits": 3
+                },
+                {
+                    "course": "MATH 125",
+                    "credits": 3
+                },
+                {
+                    "course": "MATH 129",
+                    "credits": 3
+                },
+                {
+                    "course": "MATH 130",
+                    "credits": 3
+                },
+                {
+                    "course": "MATH 134",
+                    "credits": 3
+                },
+                {
+                    "course": "MATH 135",
+                    "credits": 3
+                },
+                {
+                    "course": "MATH 140",
+                    "credits": 4
+                },
+                {
+                    "course": "MATH 141",
+                    "credits": 4
+                },
+                {
+                    "course": "ECON 205",
+                    "credits": 3
+                },
+                {
+                    "course": "CS 210",
+                    "credits": 4
+                },
+                {
+                    "course": "EDC U 212",
+                    "credits": 3
+                },
+                {
+                    "course": "PHIL 250",
+                    "credits": 3
+                },
+                {
+                    "course": "MATH 260",
+                    "credits": 3
+                },
+                {
+                    "course": "ENVSCI 261",
+                    "credits": 3
+                },
+                {
+                    "course": "UPCD 303",
+                    "credits": 3
+                },
+                {
+                    "course": "SOCIOL 350",
+                    "credits": 3
+                },
+                {
+                    "course": "SOCIOL 352",
+                    "credits": 3
+                },
+                {
+                    "course": "MATH 370",
+                    "credits": 3
+                },
+                {
+                    "course": "PSYCH 370",
+                    "credits": 3
+                }
+            ]
+        },
+        {
+            "section_title": "First Year Seminar",
+            "count": 1,
+            "courses": [
+                {
+                    "course": "INTR-D 100G",
+                    "credits": 4
+                },
+                {
+                    "course": "ECHD 101G",
+                    "credits": 4
+                },
+                {
+                    "course": "MUSIC 105G",
+                    "credits": 4
+                },
+                {
+                    "course": "THRART 108G",
+                    "credits": 4
+                },
+                {
+                    "course": "PHIL 109G",
+                    "credits": 4
+                },
+                {
+                    "course": "AMST 110G",
+                    "credits": 4
+                },
+                {
+                    "course": "ECON 110G",
+                    "credits": 4
+                },
+                {
+                    "course": "SOCIOL 110G",
+                    "credits": 4
+                },
+                {
+                    "course": "LABOR 111G",
+                    "credits": 4
+                },
+                {
+                    "course": "ANTH 112G",
+                    "credits": 4
+                },
+                {
+                    "course": "ANTH 113G",
+                    "credits": 4
+                },
+                {
+                    "course": "SEMINR 114G",
+                    "credits": 4
+                },
+                {
+                    "course": "AFRSTY 115G",
+                    "credits": 4
+                },
+                {
+                    "course": "RELSTY 115G",
+                    "credits": 4
+                },
+                {
+                    "course": "SEMINR 120G",
+                    "credits": 4
+                },
+                {
+                    "course": "WGS 120G",
+                    "credits": 4
+                },
+                {
+                    "course": "SOCIOL 120G",
+                    "credits": 4
+                },
+                {
+                    "course": "BUSADM 120G",
+                    "credits": 4
+                },
+                {
+                    "course": "CINE 121G",
+                    "credits": 4
+                },
+                {
+                    "course": "ENGL 125G",
+                    "credits": 4
+                },
+                {
+                    "course": "CLSICS 125G",
+                    "credits": 4
+                },
+                {
+                    "course": "ENGL 126G",
+                    "credits": 4
+                },
+                {
+                    "course": "ENGL 127G",
+                    "credits": 4
+                },
+                {
+                    "course": "PHIL 130G",
+                    "credits": 4
+                },
+                {
+                    "course": "PSYCH 131G",
+                    "credits": 4
+                },
+                {
+                    "course": "ENGL 181G",
+                    "credits": 4
+                },
+                {
+                    "course": "ENGL 183G",
+                    "credits": 4
+                },
+                {
+                    "course": "ENGL 185G",
+                    "credits": 4
+                },
+                {
+                    "course": "ENVSCI 185GL",
+                    "credits": 4
+                },
+                {
+                    "course": "ENGL 186G",
+                    "credits": 4
+                },
+                {
+                    "course": "ENGL 187G",
+                    "credits": 4
+                }
+            ]
+        },
+        {
+            "section_title": "Intermediate Seminar",
+            "count": 1,
+            "courses": [
+                {
+                    "course": "MUSIC 205G",
+                    "credits": 3
+                },
+                {
+                    "course": "PHIL 207G",
+                    "credits": 3
+                },
+                {
+                    "course": "LATAM 210G",
+                    "credits": 3
+                },
+                {
+                    "course": "MLLC 210G",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 210G",
+                    "credits": 3
+                },
+                {
+                    "course": "HONORS 210G",
+                    "credits": 3
+                },
+                {
+                    "course": "CLSICS 212G",
+                    "credits": 3
+                },
+                {
+                    "course": "ECON 212G",
+                    "credits": 3
+                },
+                {
+                    "course": "ECON 214GL",
+                    "credits": 3
+                },
+                {
+                    "course": "ENVSCI 214GL",
+                    "credits": 3
+                },
+                {
+                    "course": "CLSICS 215G",
+                    "credits": 3
+                },
+                {
+                    "course": "CLSICS 218G",
+                    "credits": 3
+                },
+                {
+                    "course": "RELSTY 218G",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 220G",
+                    "credits": 3
+                },
+                {
+                    "course": "LABOR 222G",
+                    "credits": 3
+                },
+                {
+                    "course": "ANTH 224G",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 227GL",
+                    "credits": 3
+                },
+                {
+                    "course": "ASIAN 227GL",
+                    "credits": 3
+                },
+                {
+                    "course": "WGS 230G",
+                    "credits": 3
+                },
+                {
+                    "course": "AMST 240G",
+                    "credits": 3
+                },
+                {
+                    "course": "MLLC 250G",
+                    "credits": 3
+                },
+                {
+                    "course": "ASAMST 250G",
+                    "credits": 3
+                },
+                {
+                    "course": "MUSIC 253G",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGL 262G",
+                    "credits": 3
+                },
+                {
+                    "course": "ENVSTY 270GL",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGL 272G",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGL 273G",
+                    "credits": 3
+                },
+                {
+                    "course": "ENGL 274G",
+                    "credits": 3
+                },
+                {
+                    "course": "HIST 290G",
+                    "credits": 3
+                },
+                {
+                    "course": "AFRSTY 292G",
+                    "credits": 3
+                }
+            ]
+        }
+    ]
+}
