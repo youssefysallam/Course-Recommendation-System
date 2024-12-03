@@ -1,583 +1,5 @@
 [
     {
-        "count": 29,
-        "courses": [
-            {
-                "course": "MATH 140",
-                "credits": 4,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "MATH 141",
-                "credits": 4,
-                "prerequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "MATH 140"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "MATH 242",
-                "credits": 4,
-                "prerequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "MATH 141"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "MATH 260",
-                "credits": 3,
-                "prerequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "MATH 140"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "CS 220",
-                "credits": 3,
-                "prerequisites": [
-                    {
-                        "count": 2,
-                        "courses": [
-                            "CS 110",
-                            "MATH 140"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "ENGIN 211L",
-                "credits": 3,
-                "prerequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "MATH 141"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "PHYSIC 113",
-                "credits": 4,
-                "prerequisites": [],
-                "corequisites": [
-                    {
-                        "count": 2,
-                        "courses": [
-                            "MATH 140",
-                            "PHYSIC 181"
-                        ]
-                    }
-                ]
-            },
-            {
-                "course": "PHYSIC 114",
-                "credits": 4,
-                "prerequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "PHYSIC 113"
-                        ]
-                    }
-                ],
-                "corequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "MATH 141"
-                        ]
-                    }
-                ]
-            },
-            {
-                "course": "PHYSIC 181",
-                "credits": 2,
-                "prerequisites": [],
-                "corequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "PHYSIC 113"
-                        ]
-                    }
-                ]
-            },
-            {
-                "course": "PHYSIC 182",
-                "credits": 2,
-                "prerequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "PHYSIC 181"
-                        ]
-                    }
-                ],
-                "corequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "PHYSIC 114"
-                        ]
-                    }
-                ]
-            },
-            {
-                "course": "CS 110",
-                "credits": 4,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "CS 210",
-                "credits": 4,
-                "prerequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "CS 110"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "CS 240",
-                "credits": 3,
-                "prerequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "CS 110"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "CS 310",
-                "credits": 3,
-                "prerequisites": [
-                    {
-                        "count": 3,
-                        "courses": [
-                            "CS 210",
-                            "CS 220",
-                            "CS 240"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "ENGIN 104",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ENGIN 231",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "PHYSIC 114"
-                        ]
-                    }
-                ]
-            },
-            {
-                "course": "ENGIN 271",
-                "credits": 1,
-                "prerequisites": [],
-                "corequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "ENGIN 231"
-                        ]
-                    }
-                ]
-            },
-            {
-                "course": "ENGIN 232",
-                "credits": 3,
-                "prerequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "ENGIN 231"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "ENGIN 272",
-                "credits": 1,
-                "prerequisites": [],
-                "corequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "ENGIN 232"
-                        ]
-                    }
-                ]
-            },
-            {
-                "course": "ENGIN 241",
-                "credits": 4,
-                "prerequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "ENGIN 231"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "ENGIN 321",
-                "credits": 3,
-                "prerequisites": [
-                    {
-                        "count": 2,
-                        "courses": [
-                            "ENGIN 232",
-                            "MATH 242"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "ENGIN 322",
-                "credits": 3,
-                "prerequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "ENGIN 321"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "ENGIN 341",
-                "credits": 3,
-                "prerequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "ENGIN 241"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "ENGIN 342",
-                "credits": 3,
-                "prerequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "CS 109",
-                            "CS 110"
-                        ]
-                    }
-                ],
-                "corequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "ENGIN 322"
-                        ]
-                    }
-                ]
-            },
-            {
-                "course": "ENGIN 346",
-                "credits": 3,
-                "prerequisites": [
-                    {
-                        "count": 3,
-                        "courses": [
-                            "ENGIN 241",
-                            "ENGIN 246",
-                            "CS 240"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "ENGIN 365",
-                "credits": 4,
-                "prerequisites": [
-                    {
-                        "count": 2,
-                        "courses": [
-                            "ENGIN 232",
-                            "MATH 242"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "ENGIN 448",
-                "credits": 3,
-                "prerequisites": [
-                    {
-                        "count": 2,
-                        "courses": [
-                            "CS 310",
-                            "ENGIN 346"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "ENGIN 491",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ENGIN 492",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            }
-        ]
-    },
-    {
-        "count": 3,
-        "courses": [
-            {
-                "course": "ENGIN 442",
-                "credits": 3,
-                "prerequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "ENGIN 346"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "CS 420",
-                "credits": 3,
-                "prerequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "CS 220"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "CS 438",
-                "credits": 3,
-                "prerequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "CS 310"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "CS 444",
-                "credits": 3,
-                "prerequisites": [
-                    {
-                        "count": 2,
-                        "courses": [
-                            "CS 310",
-                            "CS 341"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "CS 446",
-                "credits": 3,
-                "prerequisites": [
-                    {
-                        "count": 2,
-                        "courses": [
-                            "CS 341",
-                            "CS 310"
-                        ]
-                    }
-                ],
-                "corequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "CS 444"
-                        ]
-                    }
-                ]
-            },
-            {
-                "course": "CS 451",
-                "credits": 3,
-                "prerequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "CS 310"
-                        ]
-                    },
-                    {
-                        "count": 1,
-                        "courses": [
-                            "CS 420",
-                            "CS 622"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "CS 470",
-                "credits": 3,
-                "prerequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "CS 310"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "ENGIN 304",
-                "credits": 3,
-                "prerequisites": [
-                    {
-                        "count": 2,
-                        "courses": [
-                            "ENGIN 104",
-                            "ENGIN 231"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "ENGIN 331",
-                "credits": 3,
-                "prerequisites": [
-                    {
-                        "count": 2,
-                        "courses": [
-                            "PHYSIC 114",
-                            "MATH 242"
-                        ]
-                    }
-                ],
-                "corequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "MATH 270"
-                        ]
-                    }
-                ]
-            },
-            {
-                "course": "ENGIN 351",
-                "credits": 3,
-                "prerequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "ENGIN 365"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "ENGIN 366",
-                "credits": 4,
-                "prerequisites": [
-                    {
-                        "count": 1,
-                        "courses": [
-                            "ENGIN 365"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "ENGIN 471",
-                "credits": 3,
-                "prerequisites": [
-                    {
-                        "count": 3,
-                        "courses": [
-                            "ENGIN 232",
-                            "ENGIN 272",
-                            "ENGIN 331"
-                        ]
-                    }
-                ],
-                "corequisites": []
-            },
-            {
-                "course": "ENGIN 478",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ENGIN 480",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            }
-        ]
-    },
-    {
         "count": 1,
         "courses": [
             {
@@ -1481,6 +903,521 @@
             },
             {
                 "course": "AFRSTY 440",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            }
+        ]
+    },
+    {
+        "count": 1,
+        "courses": [
+            {
+                "course": "AFRSTY 101",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ART 104L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ASIAN 104L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "RELSTY 111",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "RELSTY 112L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ASIAN 112L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ASIAN 115L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "HIST 115L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "RELSTY 125L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "HIST 125L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ENGL 130",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ASIAN 161L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "HIST 161L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "CLSICS 161",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ART 212L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "RELSTY 215L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ASIAN 215L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ENVSTY 222L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "RELSTY 222L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "CLSICS 230L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "HIST 230L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ANTH 232",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "MLLC 235L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "CINE 235L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ANTH 247",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "HIST 251L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ASIAN 251L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "MLLC 255L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "HUMAN 255L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "GERMAN 255L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ART 256",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ENVSCI 256",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ANTH 256",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ANTH 260",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ANTH 263",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "MLLC 265L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ASIAN 265L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ANTH 268",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "WGS 270",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "MLLC 270",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ANTH 272",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ANTH 273",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ANTH 279",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ASIAN 280",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "CLSICS 281",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "CLSICS 282",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "CLSICS 285",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "AMST 285L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "HIST 285L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ENGL 293L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "WGS 293L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ANTH 295L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "WGS 295L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "PHIL 295",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "PHIL 297",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ASIAN 314L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "RELSTY 314L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ARABIC 320",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "LABOR 335",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ITAL 340L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "WGS 341L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "CINE 341L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ANTH 343L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "AFRSTY 343L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "WGS 345L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ASIAN 345L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "MLLC 345L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "FRENCH 345L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "GERMAN 345L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ITAL 345L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ITAL 355L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ASIAN 357L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "WGS 357L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "RELSTY 357L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ASIAN 359L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "WGS 359L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "HIST 359L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "WGS 360",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "ANTH 361L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "CINE 361L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "LATAM 375L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "PORT 375L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "RELSTY 385L",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "WGS 401",
+                "credits": 3,
+                "prerequisites": [],
+                "corequisites": []
+            },
+            {
+                "course": "WGS 411",
                 "credits": 3,
                 "prerequisites": [],
                 "corequisites": []
@@ -2620,513 +2557,122 @@
                 "credits": 3,
                 "prerequisites": [],
                 "corequisites": []
-            },
-            {
-                "course": "AFRSTY 101",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ART 104L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ASIAN 104L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "RELSTY 111",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "RELSTY 112L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ASIAN 112L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ASIAN 115L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "HIST 115L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "RELSTY 125L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "HIST 125L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ENGL 130",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ASIAN 161L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "HIST 161L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "CLSICS 161",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ART 212L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "RELSTY 215L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ASIAN 215L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ENVSTY 222L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "RELSTY 222L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "CLSICS 230L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "HIST 230L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ANTH 232",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "MLLC 235L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "CINE 235L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ANTH 247",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "HIST 251L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ASIAN 251L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "MLLC 255L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "HUMAN 255L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "GERMAN 255L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ART 256",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ENVSCI 256",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ANTH 256",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
+            }
+        ]
+    },
+    {
+        "count": 1,
+        "courses": [
             {
-                "course": "ANTH 260",
+                "course": "ENVSCI 101",
                 "credits": 3,
                 "prerequisites": [],
                 "corequisites": []
             },
             {
-                "course": "ANTH 263",
+                "course": "BIOL 101",
                 "credits": 3,
                 "prerequisites": [],
                 "corequisites": []
             },
             {
-                "course": "MLLC 265L",
+                "course": "ENVSTY 101",
                 "credits": 3,
                 "prerequisites": [],
                 "corequisites": []
             },
             {
-                "course": "ASIAN 265L",
+                "course": "BIOL 102",
                 "credits": 3,
                 "prerequisites": [],
                 "corequisites": []
             },
             {
-                "course": "ANTH 268",
+                "course": "ENGIN 103",
                 "credits": 3,
                 "prerequisites": [],
                 "corequisites": []
             },
             {
-                "course": "WGS 270",
+                "course": "ENVSCI 104",
                 "credits": 3,
                 "prerequisites": [],
                 "corequisites": []
             },
             {
-                "course": "MLLC 270",
+                "course": "ANTH 105",
                 "credits": 3,
                 "prerequisites": [],
                 "corequisites": []
             },
             {
-                "course": "ANTH 272",
+                "course": "BIOL 108",
                 "credits": 3,
                 "prerequisites": [],
                 "corequisites": []
             },
             {
-                "course": "ANTH 273",
+                "course": "CHEM 111L",
                 "credits": 3,
                 "prerequisites": [],
                 "corequisites": []
             },
             {
-                "course": "ANTH 279",
+                "course": "ENVSTY 111L",
                 "credits": 3,
                 "prerequisites": [],
                 "corequisites": []
             },
             {
-                "course": "ASIAN 280",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "CLSICS 281",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "CLSICS 282",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "CLSICS 285",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "AMST 285L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "HIST 285L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ENGL 293L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "WGS 293L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ANTH 295L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "WGS 295L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "PHIL 295",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "PHIL 297",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ASIAN 314L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "RELSTY 314L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ARABIC 320",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "LABOR 335",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ITAL 340L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "WGS 341L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "CINE 341L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ANTH 343L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "AFRSTY 343L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "WGS 345L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ASIAN 345L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "MLLC 345L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "FRENCH 345L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "GERMAN 345L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ITAL 345L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ITAL 355L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ASIAN 357L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "WGS 357L",
-                "credits": 3,
+                "course": "BIOL 111",
+                "credits": 4,
                 "prerequisites": [],
                 "corequisites": []
             },
             {
-                "course": "RELSTY 357L",
+                "course": "ENVSCI 120",
                 "credits": 3,
                 "prerequisites": [],
                 "corequisites": []
             },
             {
-                "course": "ASIAN 359L",
+                "course": "PHYSIC 121",
                 "credits": 3,
                 "prerequisites": [],
                 "corequisites": []
             },
             {
-                "course": "WGS 359L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "HIST 359L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "WGS 360",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "ANTH 361L",
-                "credits": 3,
-                "prerequisites": [],
-                "corequisites": []
-            },
-            {
-                "course": "CINE 361L",
-                "credits": 3,
+                "course": "CHEM 130",
+                "credits": 4,
                 "prerequisites": [],
                 "corequisites": []
             },
             {
-                "course": "LATAM 375L",
+                "course": "PHYSIC 134",
                 "credits": 3,
                 "prerequisites": [],
                 "corequisites": []
             },
             {
-                "course": "PORT 375L",
+                "course": "ENVSCI 150L",
                 "credits": 3,
                 "prerequisites": [],
                 "corequisites": []
             },
             {
-                "course": "RELSTY 385L",
+                "course": "ENVSTY 150L",
                 "credits": 3,
                 "prerequisites": [],
                 "corequisites": []
             },
             {
-                "course": "WGS 401",
+                "course": "ANTH 316",
                 "credits": 3,
                 "prerequisites": [],
                 "corequisites": []
             },
             {
-                "course": "WGS 411",
+                "course": "ANTH 358",
                 "credits": 3,
                 "prerequisites": [],
                 "corequisites": []
