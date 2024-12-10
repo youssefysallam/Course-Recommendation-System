@@ -1,0 +1,157 @@
+:root {
+    --white: rgb(241, 241, 241);
+    --black: rgb(14, 14, 14);
+    --primary: rgb(81, 111, 191);
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --font-family: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    color: var(--black);
+}
+
+html,
+body {
+    height: 100%;
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.total-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    position: absolute;
+    top: 2rem;
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.form-container,
+.recommendations-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: var(--primary);
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.major-form,
+.course-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+fieldset {
+    border: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+legend {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--primary);
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.form-input {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--primary);
+}
+
+.form-label {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--primary);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.form-submit {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.submit-button {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.5s ease;
+}
+
+.submit-button:hover {
+    background-color: #41549c;
+    box-shadow: var(--box-shadow);
+}
+
+.back-link,
+.reset-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover,
+.reset-link:hover {
+    color: #5a6ebf;
+}
+
+.recommendations-container ul {
+    list-style-type: disc;
+    text-align: center;
+}
+
+.recommendations-container li {
+    list-style-type: none;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}

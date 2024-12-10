@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="recommendations-container">
+    <h1>Recommended Courses</h1>
+    <p><strong>Selected Major:</strong> {{ selected_major }}</p>
+    <p><strong>Courses:</strong></p>
+    <ul>
+        {% for course in recommended_courses %}
+        <li>{{ course }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('reset') }}" class="reset-link">Start Over</a>
+</div>
+{% endblock %}

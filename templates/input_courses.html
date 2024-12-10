@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="form-container">
+    <h1>Enter Completed Courses</h1>
+    <p><strong>Selected Major:</strong> {{ selected_major }}</p>
+    <form method="POST" class="course-form">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.courses(class="form-textarea", rows="5",
+            placeholder="e.g., CS 110, CS 210, MATH 140, ENGL 101") }}
+        </div>
+        <div class="form-submit">
+            {{ form.submit(class="submit-button") }}
+        </div>
+    </form>
+    <a href="{{ url_for('home') }}" class="back-link">Go Back</a>
+</div>
+{% endblock %}

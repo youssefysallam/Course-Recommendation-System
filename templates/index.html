@@ -1,5 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Hello world</h1>
+<div class="form-container">
+    <h1>Select Your Major</h1>
+    <form method="POST" class="major-form">
+        {{ form.hidden_tag() }}
+        <fieldset>
+            <legend>{{ form.name.label }}</legend>
+            {% for subfield in form.name %}
+            <div class="form-group">
+                {{ subfield(class="form-input") }}
+                <label for="{{ subfield.id }}" class="form-label">{{
+                    subfield.label.text }}</label>
+            </div>
+            {% endfor %}
+        </fieldset>
+        <div class="form-submit">
+            {{ form.submit(class="submit-button") }}
+        </div>
+    </form>
+</div>
 {% endblock %}
