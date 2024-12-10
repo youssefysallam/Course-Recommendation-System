@@ -3,6 +3,7 @@ from flask import Flask, render_template, session, redirect, url_for
 from flask_wtf import FlaskForm, CSRFProtect
 from wtforms import RadioField, SubmitField, TextAreaField
 from wtforms.validators import InputRequired
+from dijkstra_algorithim.py import recommend_courses
 
 app = Flask(
     __name__,
@@ -31,7 +32,7 @@ class CourseForm(FlaskForm):
 
 
 def get_recommended_courses(selected_major, completed_courses):
-    return ['CS 110', 'CS 210', 'CS 310']
+    return recommend_courses(graph.courses, set(completed_courses))
 
 
 @app.route('/', methods=['GET', 'POST'])
