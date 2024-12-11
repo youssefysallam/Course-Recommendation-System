@@ -6,15 +6,15 @@ class Course:
     def __init__(self, code: str, credits: int):
         self.code = code
         self.credits = credits
-        self.prerequisites: List[DependencyGroup] = []
-        self.corequisites: List[DependencyGroup] = []
+        self.prerequisites: List[RequisiteGroup] = []
+        self.corequisites: List[RequisiteGroup] = []
 
     def __repr__(self):
         return f"Course(code='{self.code}', credits={self.credits})"
 
 
-class DependencyGroup:
-    def __init__(self, count: int, courses: List['Course']):
+class RequisiteGroup:
+    def __init__(self, count: int, courses: List[Course]):
         self.count = count  # Number of courses required from this group
         self.courses = courses
 
@@ -35,19 +35,12 @@ class ProgramRequirementGroup:
 
 class DependencyGraph:
     def __init__(self, major: str):
-        self.major = major
         # Maps course codes to Course objects
-        self.courses: Dict[str, Course] = {}
+        self.courses_map: Dict[str, Course] = {}
         self.requirement_groups: List[ProgramRequirementGroup] = []
 
-        self.build_graph()
-
-    def get_requirements(self):
-        with open(f'data/requirements/{self.major}.json', 'r') as f:
-            return json.load(f)
-
-    def build_graph(self):
-        data = self.get_requirements()
+        with open(f'data/requirements/{major}.json', 'r') as f:
+            data = json.load(f)
 
         # Create Course objects and put them into requirement groups
         for group_data in data:
@@ -55,10 +48,10 @@ class DependencyGraph:
             for course_data in group_data['courses']:
                 code = course_data['course']
                 credits = course_data['credits']
-                course = self.courses.get(code)
+                course = self.courses_map.get(code)
                 if not course:
                     course = Course(code, credits)
-                    self.courses[code] = course
+                    self.courses_map[code] = course
                 group_courses.append(course)
             requirement_group = ProgramRequirementGroup(
                 group_data['count'], group_courses)
@@ -67,26 +60,26 @@ class DependencyGraph:
         # Resolve prerequisites and corequisites
         for group_data in data:
             for course_data in group_data['courses']:
-                course = self.courses[course_data['course']]
+                course = self.courses_map[course_data['course']]
 
                 # Process prerequisites
                 for prereq_group_data in course_data.get('prerequisites', []):
                     prereq_courses = [
-                        self.courses[code] for code in prereq_group_data['courses']
+                        self.courses_map[code] for code in prereq_group_data['courses']
                     ]
-                    prereq_group = DependencyGroup(
+                    prereq_group = RequisiteGroup(
                         prereq_group_data['count'], prereq_courses)
                     course.prerequisites.append(prereq_group)
 
                 # Process corequisites
                 for coreq_group_data in course_data.get('corequisites', []):
                     coreq_courses = [
-                        self.courses[code] for code in coreq_group_data['courses']
+                        self.courses_map[code] for code in coreq_group_data['courses']
                     ]
-                    coreq_group = DependencyGroup(
+                    coreq_group = RequisiteGroup(
                         coreq_group_data['count'], coreq_courses)
                     course.corequisites.append(coreq_group)
 
     def __repr__(self):
-        return (f'DependencyGraph(courses={list(self.courses.keys())}, '
+        return (f'DependencyGraph(courses={list(self.courses_map.keys())}, '
                 f'requirement_groups={self.requirement_groups})')

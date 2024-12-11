@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="form-container">
+    <h1>Select Completed Gen Eds</h1>
+    <p><strong>Major:</strong> {{ selected_major }}</p>
+    <form method="POST" class="gened-form">
+        {{ form.hidden_tag() }}
+        <fieldset>
+            <legend>{{ form.gen_eds.label }}</legend>
+            {% for subfield in form.gen_eds %}
+            <div class="form-group">
+                {{ subfield(class="form-input") }}
+                <label for="{{ subfield.id }}" class="form-label">{{
+                    subfield.label.text }}</label>
+            </div>
+            {% endfor %}
+            {% if form.gen_eds.errors %}
+            <ul class="errors">
+                {% for error in form.gen_eds.errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </fieldset>
+        <div class="form-submit">
+            {{ form.submit(class="submit-button") }}
+        </div>
+    </form>
+    <a href="{{ url_for('home') }}" class="back-link">Go Back</a>
+</div>
+{% endblock %}
