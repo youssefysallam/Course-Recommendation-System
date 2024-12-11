@@ -34,13 +34,15 @@ class ProgramRequirementGroup:
 
 
 class DependencyGraph:
-    def __init__(self, major: str):
+    def __init__(self, major, data):
+
         # Maps course codes to Course objects
         self.courses_map: Dict[str, Course] = {}
         self.requirement_groups: List[ProgramRequirementGroup] = []
 
-        with open(f'data/requirements/{major}.json', 'r') as f:
-            data = json.load(f)
+        if not data:
+            with open(f'data/requirements/{major}.json', 'r') as f:
+                data = json.load(f)
 
         # Create Course objects and put them into requirement groups
         for group_data in data:

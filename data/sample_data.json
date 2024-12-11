@@ -1,0 +1,21 @@
+[
+    {
+        "count": "<number_of_courses_in_category>",
+        "courses": [
+            {
+                "course": "<course_code>",
+                "credits": "<number_of_credits>",
+                "prerequisites": [
+                    {
+                        "count": "<number_of_prerequisite_courses>",
+                        "courses": [
+                            "<prerequisite_course_code>",
+                            "..."
+                        ]
+                    }
+                ],
+                "corequisites": []
+            }
+        ]
+    }
+]

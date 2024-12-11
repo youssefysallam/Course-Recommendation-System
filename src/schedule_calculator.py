@@ -208,10 +208,8 @@ class ScheduleCalculator:
                     prereq_code = prereq_course.code
                     course_prereqs[course_code].add(prereq_code)
 
-        gen_ed_pattern = re.compile(r'\D+')
         gen_eds = {c for c in courses_map if not re.search(
             r'\d', c.replace(' ', '').replace('+', ''))}
-        core_courses = set(courses_map) - gen_eds
 
         total_semesters = max(8, len(courses_map) // 5 + 1)
         semesters = [[] for _ in range(total_semesters)]
