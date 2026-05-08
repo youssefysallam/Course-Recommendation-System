@@ -1,16 +1,56 @@
 {% extends "base.html" %}
 
+{% block steps %}
+<div class="steps">
+    <div class="step done">
+        <span class="step-num">✓</span>
+        <span>Major</span>
+    </div>
+    <div class="step-line"></div>
+    <div class="step done">
+        <span class="step-num">✓</span>
+        <span>Completed courses</span>
+    </div>
+    <div class="step-line"></div>
+    <div class="step done">
+        <span class="step-num">✓</span>
+        <span>Gen Eds</span>
+    </div>
+    <div class="step-line"></div>
+    <div class="step active">
+        <span class="step-num">4</span>
+        <span>Recommendations</span>
+    </div>
+</div>
+{% endblock %}
+
 {% block content %}
 <div class="recommendations-container">
-    <h1>Recommended Courses</h1>
-    <p><strong>Selected Major:</strong> {{ selected_major }}</p>
+    <div class="card-header">
+        <h1>Recommended next courses</h1>
+        <p class="rec-summary">
+            Based on your completed courses and Gen Eds for
+            <strong style="color: var(--text);">{{ selected_major }}</strong>
+        </p>
+    </div>
 
-    <p><strong>Courses:</strong></p>
-    <ul>
+    {% if recommended_courses %}
+    <ul class="course-list">
         {% for course in recommended_courses %}
-        <li>{{ course }}</li>
+        <li class="course-item">
+            <div class="course-dot"></div>
+            {% set parts = course.split(' ', 1) %}
+            <span class="course-code">{{ parts[0] }}{% if parts|length > 1 %} {{ parts[1].split(' ')[0] }}{% endif %}</span>
+            <span class="course-name">{{ course }}</span>
+        </li>
         {% endfor %}
     </ul>
-    <a href="{{ url_for('reset') }}" class="reset-link">Start Over</a>
+    {% else %}
+    <div class="empty-state">
+        <p>🎓 No remaining requirements found — you may already meet all prerequisites!</p>
+    </div>
+    {% endif %}
+
+    <a href="{{ url_for('reset') }}" class="reset-link">↺ Start over</a>
 </div>
 {% endblock %}

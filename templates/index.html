@@ -1,8 +1,35 @@
 {% extends "base.html" %}
 
+{% block steps %}
+<div class="steps">
+    <div class="step active">
+        <span class="step-num">1</span>
+        <span>Major</span>
+    </div>
+    <div class="step-line"></div>
+    <div class="step">
+        <span class="step-num">2</span>
+        <span>Completed courses</span>
+    </div>
+    <div class="step-line"></div>
+    <div class="step">
+        <span class="step-num">3</span>
+        <span>Gen Eds</span>
+    </div>
+    <div class="step-line"></div>
+    <div class="step">
+        <span class="step-num">4</span>
+        <span>Recommendations</span>
+    </div>
+</div>
+{% endblock %}
+
 {% block content %}
 <div class="form-container">
-    <h1>Select Your Major</h1>
+    <div class="card-header">
+        <h1>Select your major</h1>
+        <p>We'll load the matching degree requirements to plan your next courses.</p>
+    </div>
     <form method="POST" class="major-form">
         {{ form.hidden_tag() }}
         <fieldset>
@@ -10,8 +37,7 @@
             {% for subfield in form.name %}
             <div class="form-group">
                 {{ subfield(class="form-input") }}
-                <label for="{{ subfield.id }}" class="form-label">{{
-                    subfield.label.text }}</label>
+                <label for="{{ subfield.id }}" class="form-label">{{ subfield.label.text }}</label>
             </div>
             {% endfor %}
         </fieldset>

@@ -1,19 +1,50 @@
 {% extends "base.html" %}
 
+{% block steps %}
+<div class="steps">
+    <div class="step done">
+        <span class="step-num">✓</span>
+        <span>Major</span>
+    </div>
+    <div class="step-line"></div>
+    <div class="step active">
+        <span class="step-num">2</span>
+        <span>Completed courses</span>
+    </div>
+    <div class="step-line"></div>
+    <div class="step">
+        <span class="step-num">3</span>
+        <span>Gen Eds</span>
+    </div>
+    <div class="step-line"></div>
+    <div class="step">
+        <span class="step-num">4</span>
+        <span>Recommendations</span>
+    </div>
+</div>
+{% endblock %}
+
 {% block content %}
 <div class="form-container">
-    <h1>Enter Completed Courses</h1>
-    <p><strong>Selected Major:</strong> {{ selected_major }}</p>
+    <div class="card-header">
+        <h1>Enter completed courses</h1>
+        <p>List every course you've passed — we'll compute which requirements remain.</p>
+    </div>
+    <div class="context-pill">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        {{ selected_major }}
+    </div>
     <form method="POST" class="course-form">
         {{ form.hidden_tag() }}
-        <div class="form-group">
+        <div>
             {{ form.courses(class="form-textarea", rows="5",
-            placeholder="e.g., CS 110, CS 210, MATH 140, ENGL 101") }}
+               placeholder="e.g.  CS 110, CS 210, MATH 140, ENGL 101") }}
+            <p class="helper-text" style="margin-top: 8px;">Separate courses with commas. Use department codes like CS, MATH, ENGL.</p>
         </div>
         <div class="form-submit">
             {{ form.submit(class="submit-button") }}
         </div>
     </form>
-    <a href="{{ url_for('home') }}" class="back-link">Go Back</a>
+    <a href="{{ url_for('home') }}" class="back-link">← Back</a>
 </div>
 {% endblock %}
