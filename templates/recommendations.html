@@ -26,27 +26,112 @@
 
 {% block content %}
 <div class="recommendations-container">
+
     <div class="card-header">
-        <h1>Recommended next courses</h1>
+        <h1>Your course plan</h1>
         <p class="rec-summary">
             Based on your completed courses and Gen Eds for
             <strong style="color: var(--text);">{{ selected_major }}</strong>
+            &mdash; <span class="credit-load-badge">{{ credit_load }} load ({{ credit_cap }} cr/sem)</span>
         </p>
     </div>
 
-    {% if recommended_courses %}
-    <ul class="course-list">
-        {% for course in recommended_courses %}
-        <li class="course-item">
-            <div class="course-dot"></div>
-            <span class="course-code">{{ course }}</span>
-        </li>
-        {% endfor %}
-    </ul>
-    {% else %}
-    <div class="empty-state">
-        <p>🎓 No remaining requirements found — you may already meet all prerequisites!</p>
+    {# ── Unknown course warning ── #}
+    {% if unknown_courses %}
+    <div class="warning-box">
+        <span class="warning-icon">⚠</span>
+        <div>
+            <strong>Unrecognized course codes ignored:</strong>
+            {% for c in unknown_courses %}
+            <span class="unknown-chip">{{ c }}</span>
+            {% endfor %}
+            <p style="margin:4px 0 0; font-size:0.8rem; color:var(--text-muted);">
+                These don't match any course in the {{ selected_major }} requirements. Check your spelling.
+            </p>
+        </div>
     </div>
+    {% endif %}
+
+    {# ── Next semester ── #}
+    <section class="plan-section">
+        <h2 class="section-title">
+            <span class="sem-badge next">Next semester</span>
+        </h2>
+
+        {% if next_semester %}
+        <ul class="course-list">
+            {% for item in next_semester %}
+            <li class="course-item">
+                <div class="course-dot"></div>
+                <span class="course-code">{{ item.code }}</span>
+                {% if item.availability %}
+                <span class="avail-badge avail-{{ item.availability | replace(' ', '-') | replace('&', '') | lower }}">
+                    {{ item.availability }}
+                </span>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <div class="empty-state">
+            <p>🎓 No remaining requirements found — you may already meet all prerequisites!</p>
+        </div>
+        {% endif %}
+    </section>
+
+    {# ── Full multi-semester plan ── #}
+    {% if all_semesters | length > 1 %}
+    <section class="plan-section">
+        <h2 class="section-title">Full degree plan</h2>
+        <div class="full-plan">
+            {% for sem in all_semesters %}
+            <div class="semester-block {% if loop.first %}semester-current{% endif %}">
+                <div class="semester-header">
+                    <span class="sem-num">
+                        {% if loop.first %}Next{% else %}Semester {{ loop.index }}{% endif %}
+                    </span>
+                    <span class="sem-credit-count">
+                        {% set ns = namespace(total=0) %}
+                        {% for item in sem %}
+                            {# credits aren't available here — just show count #}
+                        {% endfor %}
+                        {{ sem | length }} course{{ 's' if sem | length != 1 }}
+                    </span>
+                </div>
+                <ul class="semester-course-list">
+                    {% for item in sem %}
+                    <li>
+                        <span class="course-code">{{ item.code }}</span>
+                        {% if item.availability %}
+                        <span class="avail-badge avail-{{ item.availability | replace(' ', '-') | replace('&', '') | lower }}">
+                            {{ item.availability }}
+                        </span>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
+    {# ── Skipped courses ── #}
+    {% if skipped %}
+    <section class="plan-section">
+        <h2 class="section-title">Courses not yet schedulable</h2>
+        <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:12px;">
+            These courses couldn't be placed in your plan. Hover or read the reason below.
+        </p>
+        <ul class="skipped-list">
+            {% for code, reason in skipped.items() %}
+            <li class="skipped-item">
+                <span class="course-code">{{ code }}</span>
+                <span class="skipped-reason">{{ reason }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
     {% endif %}
 
     <a href="{{ url_for('reset') }}" class="reset-link">↺ Start over</a>

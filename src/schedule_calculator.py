@@ -1,17 +1,43 @@
 from collections import defaultdict, deque
-from typing import Deque, List, Dict, Set
+from typing import Deque, List, Dict, Set, Tuple
 import copy
 from dependency_graph import DependencyGraph, ProgramRequirementGroup, Course, RequisiteGroup
 import re
 
+# Gen Ed category names as they appear in requirements JSON
+GEN_ED_CATEGORIES = {
+    "United States Diversity",
+    "International Diversity",
+    "Social & Behavioral Sciences",
+    "Humanities",
+    "The Arts",
+    "World Culture / World Language",
+    "First Year Seminar",
+    "Intermediate Seminar",
+}
+
+CREDIT_LOADS = {
+    "light": 12,
+    "normal": 15,
+    "heavy": 18,
+}
+
 
 class ScheduleCalculator:
-    def __init__(self, dependency_graph: DependencyGraph, completed_courses: List[str]):
+    def __init__(
+        self,
+        dependency_graph: DependencyGraph,
+        completed_courses: List[str],
+        credit_load: str = "normal",
+    ):
         self.dependency_graph = copy.deepcopy(dependency_graph)
         self.completed_courses = set(completed_courses)
         self.merged_courses_map = {}
-        self.course_to_requirement_groups: Dict[str,
-                                                List[ProgramRequirementGroup]] = defaultdict(list)
+        self.course_to_requirement_groups: Dict[str, List[ProgramRequirementGroup]] = defaultdict(list)
+        self.credit_cap = CREDIT_LOADS.get(credit_load, 15)
+
+        # Tracks courses excluded from scheduling and why
+        self.skipped_courses: Dict[str, str] = {}
 
         self.process_dependency_graph()
         self.sorted_courses = []
@@ -46,10 +72,8 @@ class ScheduleCalculator:
 
             for code in group:
                 course = courses_map[code]
-                merged_course.prerequisites.extend(copy.deepcopy(
-                    prereq) for prereq in course.prerequisites)
-                merged_course.corequisites.extend(
-                    copy.deepcopy(coreq) for coreq in course.corequisites)
+                merged_course.prerequisites.extend(copy.deepcopy(prereq) for prereq in course.prerequisites)
+                merged_course.corequisites.extend(copy.deepcopy(coreq) for coreq in course.corequisites)
 
             for code in group:
                 del courses_map[code]
@@ -75,7 +99,12 @@ class ScheduleCalculator:
                 for coreq in coreq_group.courses:
                     coreq_code = coreq.code
                     coreq_course = courses_map.get(coreq_code)
-                    if coreq_course and any(c.code == current_code for c in coreq_course.corequisites for _ in []):
+                    # Fixed: iterate coreq_course.corequisites as List[RequisiteGroup]
+                    if coreq_course and any(
+                        c.code == current_code
+                        for grp in coreq_course.corequisites
+                        for c in grp.courses
+                    ):
                         if coreq_code not in mutual_set:
                             to_process.append(coreq_code)
 
@@ -92,8 +121,7 @@ class ScheduleCalculator:
             new_courses = []
             removed_courses = 0
             for course in requisite_group.courses:
-                merged_code = self.merged_courses_map.get(
-                    course.code, course.code)
+                merged_code = self.merged_courses_map.get(course.code, course.code)
                 if merged_code != course.code:
                     merged_course = courses_map.get(merged_code)
                     if merged_course and merged_code != target_course_code:
@@ -113,7 +141,6 @@ class ScheduleCalculator:
                 for prereq_group in course.prerequisites
                 if replace_course_codes(prereq_group, course.code).courses
             ]
-
             course.corequisites = [
                 replace_course_codes(coreq_group, course.code)
                 for coreq_group in course.corequisites
@@ -122,7 +149,6 @@ class ScheduleCalculator:
 
     def treat_corequisites_as_prerequisites(self):
         courses_map = self.dependency_graph.courses_map
-
         for course in courses_map.values():
             for coreq_group in course.corequisites:
                 course.prerequisites.append(RequisiteGroup(
@@ -140,23 +166,16 @@ class ScheduleCalculator:
         for course in courses_map.values():
             new_prereq_groups = []
             for prereq_group in course.prerequisites:
-                remaining_courses = [
-                    c for c in prereq_group.courses if c.code not in self.completed_courses]
-                completed_in_group = len(
-                    prereq_group.courses) - len(remaining_courses)
-                adjusted_count = max(prereq_group.count -
-                                     completed_in_group, 0)
+                remaining_courses = [c for c in prereq_group.courses if c.code not in self.completed_courses]
+                completed_in_group = len(prereq_group.courses) - len(remaining_courses)
+                adjusted_count = max(prereq_group.count - completed_in_group, 0)
                 if adjusted_count > 0 and len(remaining_courses) >= adjusted_count:
-                    new_prereq_groups.append(RequisiteGroup(
-                        count=adjusted_count,
-                        courses=remaining_courses
-                    ))
+                    new_prereq_groups.append(RequisiteGroup(count=adjusted_count, courses=remaining_courses))
             course.prerequisites = new_prereq_groups
 
     def update_requirement_groups(self):
         for group in self.dependency_graph.requirement_groups:
-            remaining_courses = [
-                c for c in group.courses if c.code not in self.completed_courses]
+            remaining_courses = [c for c in group.courses if c.code not in self.completed_courses]
             completed_in_group = len(group.courses) - len(remaining_courses)
             group.count = max(group.count - completed_in_group, 0)
             group.courses = remaining_courses
@@ -177,8 +196,7 @@ class ScheduleCalculator:
         for course_code, course in courses_map.items():
             for prereq_group in course.prerequisites:
                 for prereq_course in prereq_group.courses:
-                    prereq_code = self.merged_courses_map.get(
-                        prereq_course.code, prereq_course.code)
+                    prereq_code = self.merged_courses_map.get(prereq_course.code, prereq_course.code)
                     if prereq_code != course_code:
                         adjacency_list[prereq_code].append(course_code)
                         in_degree[course_code] += 1
@@ -196,31 +214,36 @@ class ScheduleCalculator:
 
         self.sorted_courses = sorted_order
 
+    def _missing_prereqs_for(self, course_code: str, course_prereqs: Dict[str, Set[str]], scheduled_before: Set[str]) -> List[str]:
+        """Return list of unmet prerequisite codes for a course."""
+        missing = []
+        for prereq in course_prereqs.get(course_code, set()):
+            if prereq not in scheduled_before and prereq not in self.completed_courses:
+                missing.append(prereq)
+        return missing
+
     def assign_courses_to_semesters(self) -> List[List[str]]:
-        semesters = []
-        scheduled_courses = set()
+        scheduled_courses: Set[str] = set()
         courses_map = self.dependency_graph.courses_map
-        course_prereqs = defaultdict(set)
+        course_prereqs: Dict[str, Set[str]] = defaultdict(set)
 
         for course_code, course in courses_map.items():
             for prereq_group in course.prerequisites:
                 for prereq_course in prereq_group.courses:
-                    prereq_code = prereq_course.code
-                    course_prereqs[course_code].add(prereq_code)
+                    course_prereqs[course_code].add(prereq_course.code)
 
-        gen_eds = {c for c in courses_map if not re.search(
-            r'\d', c.replace(' ', '').replace('+', ''))}
+        # Use GEN_ED_CATEGORIES to correctly identify gen eds instead of digit regex
+        gen_eds = {c for c in courses_map if c in GEN_ED_CATEGORIES}
 
         total_semesters = max(8, len(courses_map) // 5 + 1)
-        semesters = [[] for _ in range(total_semesters)]
-        semester_credits = [0 for _ in range(total_semesters)]
+        semesters: List[List[str]] = [[] for _ in range(total_semesters)]
+        semester_credits = [0] * total_semesters
 
+        # Spread gen eds evenly
         total_gen_eds = len(gen_eds)
         gen_eds_per_semester = total_gen_eds // total_semesters
         extra_gen_eds = total_gen_eds % total_semesters
-
-        gen_ed_list = sorted(gen_eds)
-        gen_ed_queue = deque(gen_ed_list)
+        gen_ed_queue: deque = deque(sorted(gen_eds))
 
         for i in range(total_semesters):
             num_gen_ed = gen_eds_per_semester + (1 if i < extra_gen_eds else 0)
@@ -234,30 +257,45 @@ class ScheduleCalculator:
         for course_code in self.sorted_courses:
             if course_code in scheduled_courses:
                 continue
+            placed = False
             for i in range(total_semesters):
+                scheduled_before = {c for sem in semesters[:i] for c in sem}
                 prereqs = course_prereqs[course_code]
-                if all(any(prereq in semesters[sem] for sem in range(i)) for prereq in prereqs):
-                    if semester_credits[i] + courses_map[course_code].credits <= 15:
+                if all(p in scheduled_before or p in self.completed_courses for p in prereqs):
+                    if semester_credits[i] + courses_map[course_code].credits <= self.credit_cap:
                         semesters[i].append(course_code)
                         semester_credits[i] += courses_map[course_code].credits
                         scheduled_courses.add(course_code)
+                        placed = True
                         break
+            if not placed:
+                missing = self._missing_prereqs_for(course_code, course_prereqs, set(c for sem in semesters for c in sem))
+                if missing:
+                    self.skipped_courses[course_code] = f"unmet prerequisites: {', '.join(sorted(missing))}"
+                else:
+                    self.skipped_courses[course_code] = f"could not fit within {self.credit_cap}-credit cap"
 
+        # Second pass for any remaining unscheduled courses (relax prereq order)
         remaining_courses = set(courses_map.keys()) - scheduled_courses
         for course_code in remaining_courses:
+            placed = False
             for i in range(total_semesters):
-                if semester_credits[i] + courses_map[course_code].credits <= 15:
+                if semester_credits[i] + courses_map[course_code].credits <= self.credit_cap:
                     semesters[i].append(course_code)
                     semester_credits[i] += courses_map[course_code].credits
                     scheduled_courses.add(course_code)
+                    placed = True
                     break
+            if not placed:
+                self.skipped_courses[course_code] = f"could not fit within {self.credit_cap}-credit cap in any semester"
 
-        semesters = [sem for sem in semesters if sem]
-
-        return semesters
+        return [sem for sem in semesters if sem]
 
     def get_semesters(self) -> List[List[str]]:
         return self.semesters
 
     def get_sorted_courses(self) -> List[str]:
         return self.sorted_courses
+
+    def get_skipped_courses(self) -> Dict[str, str]:
+        return self.skipped_courses

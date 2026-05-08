@@ -40,7 +40,7 @@
             <legend>{{ form.gen_eds.label }}</legend>
             {% for subfield in form.gen_eds %}
             <div class="form-group">
-                {{ subfield(class="form-input") }}
+                {{ subfield() }}
                 <label for="{{ subfield.id }}" class="form-label">{{ subfield.label.text }}</label>
             </div>
             {% endfor %}

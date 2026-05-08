@@ -36,7 +36,7 @@
             <legend>{{ form.name.label }}</legend>
             {% for subfield in form.name %}
             <div class="form-group">
-                {{ subfield(class="form-input") }}
+                {{ subfield() }}
                 <label for="{{ subfield.id }}" class="form-label">{{ subfield.label.text }}</label>
             </div>
             {% endfor %}

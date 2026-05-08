@@ -2,25 +2,13 @@
 
 {% block steps %}
 <div class="steps">
-    <div class="step done">
-        <span class="step-num">✓</span>
-        <span>Major</span>
-    </div>
+    <div class="step done"><span class="step-num">✓</span><span>Major</span></div>
     <div class="step-line"></div>
-    <div class="step done">
-        <span class="step-num">✓</span>
-        <span>Gen Eds</span>
-    </div>
+    <div class="step done"><span class="step-num">✓</span><span>Gen Eds</span></div>
     <div class="step-line"></div>
-    <div class="step active">
-        <span class="step-num">3</span>
-        <span>Completed courses</span>
-    </div>
+    <div class="step active"><span class="step-num">3</span><span>Completed courses</span></div>
     <div class="step-line"></div>
-    <div class="step">
-        <span class="step-num">4</span>
-        <span>Recommendations</span>
-    </div>
+    <div class="step"><span class="step-num">4</span><span>Recommendations</span></div>
 </div>
 {% endblock %}
 
@@ -34,17 +22,62 @@
         <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
         {{ selected_major }}
     </div>
+
     <form method="POST" class="course-form">
         {{ form.hidden_tag() }}
-        <div>
-            {{ form.courses(class="form-textarea", rows="5",
-               placeholder="e.g.  CS 110, CS 210, MATH 140, ENGL 101") }}
-            <p class="helper-text" style="margin-top: 8px;">Separate courses with commas. Use department codes like CS, MATH, ENGL.</p>
+
+        {# Autocomplete search row #}
+        <div class="autocomplete-wrapper">
+            <label class="field-label" for="course-search">Search &amp; add courses</label>
+            <div class="autocomplete-row">
+                <input
+                    id="course-search"
+                    type="text"
+                    class="form-input"
+                    placeholder="Type a course code, e.g. CS 110…"
+                    autocomplete="off"
+                />
+                <button type="button" id="add-course-btn" class="add-btn">Add</button>
+            </div>
+            <div id="autocomplete-list" class="autocomplete-list" hidden></div>
         </div>
-        <div class="form-submit">
+
+        {# Selected course chips #}
+        <div id="course-chips" class="course-chips"></div>
+
+        {# Single textarea — autocomplete syncs to this; user can also paste directly #}
+        <div class="field-group">
+            <label class="field-label" for="courses-field">Or paste a comma-separated list</label>
+            {{ form.courses(id="courses-field", class="form-textarea", rows="3",
+               placeholder="e.g.  CS 110, CS 210, MATH 140") }}
+        </div>
+
+        <p class="helper-text">Separate with commas. Use department codes like CS, MATH, ENGL.</p>
+
+        {# Credit load preference #}
+        <div class="field-group" style="margin-top: 12px;">
+            <label class="field-label">Credit load per semester</label>
+            <div class="credit-load-options">
+                {% for subfield in form.credit_load %}
+                <label class="credit-option">
+                    {{ subfield() }}
+                    <span>{{ subfield.label.text }}</span>
+                </label>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="form-submit" style="margin-top: 16px;">
             {{ form.submit(class="submit-button") }}
         </div>
     </form>
-    <a href="{{ url_for('home') }}" class="back-link">← Back</a>
+
+    <a href="{{ url_for('geneds') }}" class="back-link">← Back</a>
 </div>
+
+<script>
+    window.KNOWN_CODES = {{ known_codes | tojson }};
+    // Point autocomplete at the single textarea
+    window.COURSES_FIELD_ID = 'courses-field';
+</script>
 {% endblock %}
