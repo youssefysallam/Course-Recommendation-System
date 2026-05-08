@@ -1,4 +1,5 @@
 import json
+import os
 from typing import List, Dict
 
 
@@ -34,14 +35,16 @@ class ProgramRequirementGroup:
 
 
 class DependencyGraph:
-    def __init__(self, major, data):
+    def __init__(self, major, data=None):
 
         # Maps course codes to Course objects
         self.courses_map: Dict[str, Course] = {}
         self.requirement_groups: List[ProgramRequirementGroup] = []
 
         if not data:
-            with open(f'data/requirements/{major}.json', 'r') as f:
+            _here = os.path.dirname(os.path.abspath(__file__))
+            _path = os.path.join(_here, '..', 'data', 'requirements', f'{major}.json')
+            with open(_path, 'r') as f:
                 data = json.load(f)
 
         # Create Course objects and put them into requirement groups

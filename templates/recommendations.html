@@ -9,12 +9,12 @@
     <div class="step-line"></div>
     <div class="step done">
         <span class="step-num">✓</span>
-        <span>Completed courses</span>
+        <span>Gen Eds</span>
     </div>
     <div class="step-line"></div>
     <div class="step done">
         <span class="step-num">✓</span>
-        <span>Gen Eds</span>
+        <span>Completed courses</span>
     </div>
     <div class="step-line"></div>
     <div class="step active">
@@ -39,9 +39,7 @@
         {% for course in recommended_courses %}
         <li class="course-item">
             <div class="course-dot"></div>
-            {% set parts = course.split(' ', 1) %}
-            <span class="course-code">{{ parts[0] }}{% if parts|length > 1 %} {{ parts[1].split(' ')[0] }}{% endif %}</span>
-            <span class="course-name">{{ course }}</span>
+            <span class="course-code">{{ course }}</span>
         </li>
         {% endfor %}
     </ul>

@@ -55,7 +55,8 @@ def get_recommended_courses(selected_major, completed_courses):
     selected_major = selected_major.replace('.', '').replace(' ', '_')
     graph = DependencyGraph(selected_major)
     calculator = ScheduleCalculator(graph, completed_courses)
-    return calculator.get_semesters()[0]
+    semesters = calculator.get_semesters()
+    return semesters[0] if semesters else []
 
 
 @app.route('/', methods=['GET', 'POST'])
