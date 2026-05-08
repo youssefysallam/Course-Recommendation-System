@@ -1,183 +1,95 @@
-# 🎓 Course Recommendation System (Degree Planner)
+# Course Recommendation System
 
-A Python-based **course recommendation system** that suggests the **best set of courses to take next semester** to finish your degree requirements in the **fastest possible time**.
-
-It models degree requirements and prerequisites as a **dependency graph**, then uses **Dijkstra’s algorithm** to find an optimal “shortest path” plan toward graduation (minimizing remaining requirement distance / steps).
+A Flask web app that recommends which courses to take next semester to make the fastest progress toward a CS or CE degree at UMass Boston. It models degree requirements and prerequisites as a directed dependency graph, then applies Dijkstra's algorithm to find the shortest path to graduation.
 
 ---
 
-## ✨ What this project does
+## How it works
 
-- ✅ Reads a **course catalog** and **degree requirement** definitions
-- ✅ Builds a **prerequisite / dependency graph** (courses → unlocked courses / requirements)
-- ✅ Recommends the **best courses for the next term** to make the fastest progress
-- ✅ Includes a **schedule calculator** and performance test visualization
-
----
-
-## 🧠 How it works (high-level)
-
-### 1) Data ingestion
-The system loads:
-- **Degree requirement JSON** (ex: CS BS, CS BA, Comp Eng BS)
-- **General education course lists**
-- **Course catalog CSV**
-- **Term offerings CSVs** (Fall/Spring/Winter, etc.)
-
-### 2) Build a dependency graph
-Courses and requirements are represented as nodes, with edges capturing:
-- prerequisites / requisites
-- requirement dependencies (what unlocks what)
-- progression constraints (must take X before Y)
-
-### 3) Run Dijkstra’s algorithm
-The planner treats “reaching graduation” as a goal state and uses **Dijkstra’s algorithm** to compute the shortest path / minimum-cost progression through remaining requirements.
-
-### 4) Recommend “next semester” courses
-From the shortest path (and any term constraints), the system outputs the most useful set of courses to take in the next term—i.e., the ones that unlock the most progress toward completing the degree fastest.
+1. **Select your major** — Computer Science BA, Computer Science BS, or Computer Engineering BS
+2. **Enter completed courses** — comma-separated list of courses you've already passed
+3. **Mark completed Gen Eds** — check off your fulfilled general education requirements
+4. **Get recommendations** — the algorithm computes which eligible courses, taken now, reduce your remaining graduation distance the most
 
 ---
 
-## 🗂️ Repository structure
+## Algorithm
 
-```text
-Course-Recommendation-System/
-├── data/
-│   ├── requirements/
-│   │   ├── Computer_Engineering_BS.json
-│   │   ├── Computer_Science_BA.json
-│   │   └── Computer_Science_BS.json
-│   ├── all_general_education_courses.json
-│   ├── general_education_courses.json
-│   ├── new_general_education_courses.json
-│   ├── course_catalog.csv
-│   ├── fall_2024.csv
-│   ├── spring_2025.csv
-│   ├── winter_2025.csv
-│   └── sample_data.json
-│
-├── scripts/
-│   ├── scrape_from_course_catalog.py
-│   ├── scrape_from_degree_audits.py
-│   ├── add_requisites.py
-│   ├── transfer_requisites.py
-│   ├── simplify_requisites.py
-│   ├── add_gen_ed_courses.py
-│   ├── add_gen_eds.py
-│   ├── process_gen_eds.py
-│   ├── get_gen_ed_courses.py
-│   ├── add_credit_count_to_course.py
-│   ├── delete_gen_eds_with_requisites_*.py
-│   └── fix_dictionaries_in_requirements_*.py
-│
-├── src/
-│   ├── app.py
-│   ├── dependency_graph.py
-│   ├── dijkstra_algorithm.py
-│   └── schedule_calculator.py
-│
-├── static/
-├── templates/
-├── test/
-├── requirements.txt
-└── schedule_calculator_running_time.png
+Requirements and prerequisites are modeled as a weighted directed acyclic graph:
+
+```
+MATH 140 ──► CS 210 ──► CS 310 ──► CS 410
+                │
+                └──► CS 240 ──► CS 340
+```
+
+Each node is a course requirement; edges represent prerequisites. Completed courses are removed from the graph. Dijkstra's algorithm computes shortest graduation path from the current state, and the first-semester slice of that path is returned as recommendations.
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Backend | Python 3 + Flask + Flask-WTF |
+| Algorithm | Dijkstra (custom graph implementation) |
+| Templates | Jinja2 |
+| Styling | Vanilla CSS (dark theme, no framework dependency) |
+| Data | JSON degree requirement files (CS BA, CS BS, CE BS) |
+
+---
+
+## Project Structure
+
+```
+src/
+  app.py                  Flask routes and session management
+  dependency_graph.py     Directed graph from JSON requirement files
+  schedule_calculator.py  Dijkstra-based semester planner
+  dijkstra_algorithim.py  Core shortest-path implementation
+data/requirements/
+  Computer_Science_BA.json
+  Computer_Science_BS.json
+  Computer_Engineering_BS.json
+data/
+  course_catalog.csv      Full UMass Boston course catalog
+  fall_2024.csv           Section availability by semester
+  general_education_courses.json
+static/css/styles.css     Dark design system
+templates/                Jinja2 HTML templates (4-step flow)
+scripts/                  Data scraping + preprocessing utilities
 ```
 
 ---
 
-## 📊 Performance
+## Getting Started
 
-The repo includes a benchmark plot showing how the schedule calculator runtime scales with the number of courses:
-
-![Schedule Calculator Runtime](schedule_calculator_running_time.png)
-
----
-
-## 🚀 Setup & Run Locally
-
-### 1) Create a virtual environment (recommended)
-
-```bash
-python -m venv .venv
-
-# Windows:
-.venv\Scripts\activate
-
-# macOS/Linux:
-source .venv/bin/activate
-```
-### 2) Install dependencies
 ```bash
 pip install -r requirements.txt
+cd src
+flask run
+# → http://localhost:5000
 ```
-### 3) Run The App
+
+---
+
+## Data
+
+Degree requirement JSON files in `data/requirements/` were scraped from UMass Boston's degree audit pages using the scripts in `scripts/`. The course catalog and semester availability were scraped from the UMass Boston course catalog.
+
+To update requirements, run:
+
 ```bash
-python src/app.py
+python scripts/scrape_from_degree_audits.py
+python scripts/scrape_from_course_catalog.py
 ```
 
 ---
 
-## 🧪 Example Inputs (Data-Driven)
+## Key Design Decisions
 
-**Degree requirement files** live in:  
-`data/requirements/`
+**Graph over rules engine** — encoding requirements as a dependency graph lets the algorithm discover prerequisite chains automatically rather than hard-coding semester sequences per major.
 
-**Catalog and term offerings** live in:  
-`data/`
+**Dijkstra on the requirement graph** — gives an optimal first-semester recommendation in O((V + E) log V) regardless of how complex the requirement tree is.
 
-If you want to test quickly, start with:
-
-- `data/sample_data.json`
-
-- A degree plan JSON  
-  - e.g. `Computer_Science_BS.json`
-
-- A term offering CSV  
-  - e.g. `spring_2025.csv`
-
----
-
-## 🛠️ Scripts (Data Building / Cleanup)
-
-The `scripts/` folder contains utilities for:
-
-- Scraping course catalogs / degree audits  
-- Adding or simplifying requisites  
-- Generating general education mappings  
-- Fixing requirement dictionaries  
-- Augmenting courses with credit counts  
-
-These scripts exist to make the dataset **maintainable** and **reproducible**.
-
----
-
-## 🧩 Core Modules
-
-### `dependency_graph.py`
-Builds the prerequisite / requirement graph structure.
-
-### `dijkstra_algorithm.py`
-Finds the shortest / fastest path toward completing remaining requirements.
-
-### `schedule_calculator.py`
-Computes feasible course selections and evaluates timing + performance.
-
-### `app.py`
-Main entry point (CLI or web server depending on implementation).
-
----
-
-## ✅ Roadmap Ideas (Optional Improvements)
-
-- **Term-aware optimization**  
-  *(only recommend courses actually offered next term)*
-
-- **Credit-load constraints**  
-  *(e.g., 12–18 credits per term)*
-
-- **Multi-objective scoring**  
-  *(fastest time + difficulty + instructor rating)*
-
-- **Export plan to calendar / PDF**
-
-- **Better UI for selecting degree + completed courses**
+**Flask-WTF CSRF** — all form submissions are protected; session stores major and completed-course selections between steps.
